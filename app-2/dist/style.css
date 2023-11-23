@@ -1,7 +1,12 @@
-h1{
-    color:blue;
+.hello-button {
+    font-size: 20px;
+    padding: 7px 15px;
+    background: green;
+    color: white;
+    outline :none;
 }
-img {
-    width: 700px;
-    height: 500px;
+
+.hello-world-text {
+    color: green;
+    font-weight: bold;
 }

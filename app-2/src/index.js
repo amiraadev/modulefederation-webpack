@@ -1,9 +1,7 @@
-import Header from './components/header/header.js'
-import Content from './components/content/content.js'
+import HelloButton from './components/hello-button/helloButton.js'
 
 const helloButton = new HelloButton();
 
-    header.render();
-    content.render();
+helloButton.render();
 
 

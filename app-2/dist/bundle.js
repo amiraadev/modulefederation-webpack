@@ -9,17 +9,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
- 
-class Header {
+/* harmony import */ var _helloButton_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+
+class helloButton {
     render(){
-        const h1 = document.createElement("h1");
-        const body = document.querySelector("body");
-        h1.innerHTML = "Title of the page";
-        body.appendChild(h1);
+        const button = document.createElement('button');
+        button.innerHTML = 'Hello World';
+        button.classList.add('hello-button');
+        const body = document.querySelector('body');
+        // Use 'addEventListener' instead of 'onClick'
+        button.addEventListener('click', function () {
+            const p = document.createElement('p'); // Specify the tag name 'p'
+            p.innerHTML = 'Hello everyone! We are learning webpack'; // Fix the innerHTML
+            p.classList.add('hello-world-text');
+            body.appendChild(p);
+        });
+        body.appendChild(button);
     }
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (helloButton); 
 
 /***/ }),
 /* 2 */
@@ -28,48 +38,6 @@ class Header {
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
-
-/***/ }),
-/* 3 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _content_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
-/* harmony import */ var _ai_image_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-
-
-// import ai_image from "./kiwi.jpg"
-class Content {
-    render(){
-        const img = document.createElement("img");
-        img.src= _ai_image_jpg__WEBPACK_IMPORTED_MODULE_1__ ;
-        // img.src= "./dist/687bee259ccec0b47f48.jpg" ;
-        img.alt="couldn't find the image";
-        const body = document.querySelector("body")
-        const paragraph = document.createElement("p");
-        paragraph.innerHTML = "random paragraph";
-        body.appendChild(img);
-        body.appendChild(paragraph);
-    }
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Content);
-
-/***/ }),
-/* 4 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-/* 5 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "687bee259ccec0b47f48.jpg";
 
 /***/ })
 /******/ 	]);
@@ -127,26 +95,17 @@ module.exports = __webpack_require__.p + "687bee259ccec0b47f48.jpg";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		__webpack_require__.p = "/static/";
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_header_header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _components_content_content_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _components_hello_button_helloButton_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 
 
+const helloButton = new _components_hello_button_helloButton_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
 
-const header = new _components_header_header_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
-const content = new _components_content_content_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
-
-    header.render();
-    content.render();
+helloButton.render();
 
 
 
