@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 
- app.use('/static', express.static(path.resolve(__dirname, '../dist')));
+ app.use('/', express.static(path.resolve(__dirname, '../dist')));
 
 
     app.get('/hello', function(req, res){
