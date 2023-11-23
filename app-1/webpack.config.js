@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {ModuleFederationPlugin}=require('webpack').container
 
 module.exports = {
     entry:{"bundle":"./src/index.js"},
@@ -32,6 +33,12 @@ module.exports = {
                 description:'test description 1'
             },
             minify:false
+        }),
+        new ModuleFederationPlugin({
+            name:"mainApp",
+            remotes:{
+                helloButtonApp:"helloButtonApp@http://localhost:3001/hello/remoteEntry.js"
+            },
         })
     ]
 }

@@ -38,14 +38,8 @@ module.exports = {
             name:"helloButtonApp",
             filename:"remoteEntry.js",
             exposes:{
-                './HelloWorldButton':'./src/components/hello-button/helloButton.js'
-            },
-            chunks: ['bundle'],
-            title:"Express integration with webpack",
-            meta:{
-                description:'test description 1'
-            },
-            minify:false
+                './helloButton':'./src/components/hello-button/helloButton.js'
+            }
         })
 
     ]
