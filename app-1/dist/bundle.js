@@ -479,9 +479,8 @@ const content = new _components_content_content_js__WEBPACK_IMPORTED_MODULE_1__[
 
 __webpack_require__.e(/* import() */ 1).then(__webpack_require__.t.bind(__webpack_require__, 6, 23))
    .then(HelloButtonModule => {
-    const HelloButton = new HelloButtonModule.default;
+    const HelloButton =  HelloButtonModule.default;
     const helloButton = new HelloButton();
-    console.log("emported");
     helloButton.render()
    })
 
