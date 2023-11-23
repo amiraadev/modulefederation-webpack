@@ -7,22 +7,11 @@ const content = new Content();
     header.render();
     content.render();
 
-// import ('helloButtonApp/helloButton')
-//    .then(HelloButtonModule => {
-//     const HelloButton =  HelloButtonModule.default;
-//     const helloButton = new HelloButton();
-//     console.log("emported");
-//     helloButton.render()
-//    })
+import ('helloButtonApp/helloButton')
+   .then(HelloButtonModule => {
+    const HelloButton =  HelloButtonModule.default;
+    const helloButton = new HelloButton();
+    helloButton.render()
+   })
 
-   import('helloButtonApp/helloButton')
-    .then(HelloButtonModule => {
-        const HelloButtonClass = HelloButtonModule.default; // Ensure 'default' property holds the class
-        console.log(HelloButtonClass);
-        // const helloButtonInstance = new HelloButtonClass();
-        // console.log("Imported successfully");
-        // helloButtonInstance.render();
-    })
-    .catch(error => {
-        console.error('Error importing module:', error);
-    });
+   
