@@ -11,5 +11,6 @@ import ('helloButtonApp/helloButton')
    .then(HelloButtonModule => {
     const HelloButton = new HelloButtonModule.default;
     const helloButton = new HelloButton();
+    console.log("emported");
     helloButton.render()
    })

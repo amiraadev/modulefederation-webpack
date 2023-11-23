@@ -368,7 +368,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/static/";
+/******/ 		__webpack_require__.p = "http://localhost:3000/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
@@ -481,6 +481,7 @@ __webpack_require__.e(/* import() */ 1).then(__webpack_require__.t.bind(__webpac
    .then(HelloButtonModule => {
     const HelloButton = new HelloButtonModule.default;
     const helloButton = new HelloButton();
+    console.log("emported");
     helloButton.render()
    })
 

@@ -8,7 +8,8 @@ module.exports = {
     output:{
         filename:"bundle.js",
         path:path.resolve(__dirname,"./dist"),
-        publicPath:'/static/'
+        // publicPath:'/static/'
+        publicPath:'http://localhost:3000/'
     },
     mode:"none",
     module:{

@@ -138,7 +138,7 @@ var helloButtonApp;
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "";
+/******/ 		__webpack_require__.p = "http://localhost:3001/hello/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/css loading */
